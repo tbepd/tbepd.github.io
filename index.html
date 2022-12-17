@@ -22,7 +22,7 @@ function saveFile(csvText, fileName) {
 
 // Actually get the data from Espruino
 function getData() {
-  UART.write('\x03\x10getData(f.write, "templog")\n', function(data) {
+  UART.write('\x03\x10getData(console.log, "templog")\n', function(data) {
     console.log("Received",JSON.stringify(data));
     // If getData uses console.log rather than Bluetooth.println,
     // it'll cause a prompt to be written at the end of the output
