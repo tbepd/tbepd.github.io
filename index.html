@@ -28,6 +28,7 @@ function getData() {
     // it'll cause a prompt to be written at the end of the output
     // we detect that here are remove it.
     if (data.endsWith(">")) data = data.slice(0,-1);
+    data = data.replace("\r\n\r\n", "\r\n");
     saveFile(data,"info.csv");
   });
 }
