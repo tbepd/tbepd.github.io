@@ -30,7 +30,7 @@ function getData() {
     if (data.endsWith(">")) data = data.slice(0,-1);
     // No effing idea why this is necessary, but as far as I can tell, it is, to prevent blank lines in the output.
     data = data.replaceAll("\r\n\r\n", "\r\n");
-    saveFile(data,"info.csv");
+    saveFile(data,"templog.csv");
   });
 }
   </script>
